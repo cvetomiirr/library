@@ -1,0 +1,14 @@
+<h2 class="header">List of Books</h2>
+
+<div *ngFor="let book of books" class="overview" (click)="onSelect(book)">
+  <a [routerLink]="['/book', book.id]">
+    <div>
+      <img class="image" src="{{book.image}}">
+    </div>
+    <div class="details">
+      <p><span style="font-size: 20px; font-family: bold "> Name: </span>{{book.name}}</p>
+      <p><span style="font-size: 20px; font-family: bold "> Price: </span> {{book.price}}</p>
+      <p><span style="font-size: 20px; font-family: bold "> Short description: </span> {{book.shortDescription}}</p>
+    </div>
+  </a>
+</div>

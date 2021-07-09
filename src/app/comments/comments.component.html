@@ -1,0 +1,9 @@
+<button (click)="onClick()">Add comment</button>
+<div *ngIf="isOpened">
+  <form [formGroup]="commentForm" (ngSubmit)="onSubmit($event)">
+    <p></p>
+    <label for="comment">Comment: </label>
+    <input id="comment" formControlName="comment">
+    <button type="submit">Submit</button>
+  </form>
+</div>

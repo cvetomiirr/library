@@ -1,0 +1,16 @@
+<p></p>
+<button (click)="onClick()"> Order this book </button>
+
+<div *ngIf="isOpened">
+  <form [formGroup]="buyingForm" (ngSubmit)="onSubmit($event)">
+    <p></p>
+    <label for="name">Name: </label>
+    <input id="name" formControlName="name">
+    <p></p>
+    <label for="address">Address: </label>
+    <input id="address" formControlName="address">
+    <p></p>
+    <button type="submit" (click)="openModal()">Submit</button>
+  </form>
+</div>
+

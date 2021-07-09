@@ -1,0 +1,35 @@
+<div class="overview">
+  <div class="backButton">
+    <button [routerLink]="['/books']">x</button>
+  </div>
+  <div class="books">
+    <div>
+      <img class="image" src="{{image}}" alt="text">
+    </div>
+    <div class="details">
+      <p><span style="font-size: 20px; font-family: bold "> Name: </span>{{name}}</p>
+      <p></p>
+      <p><span style="font-size: 20px; font-family: bold "> Price: </span> {{price}}</p>
+      <p></p>
+      <p><span style="font-size: 20px; font-family: bold "> Short description: </span> {{shortDescription}}</p>
+      <p></p>
+      <p><span style="font-size: 20px; font-family: bold "> Description: </span> {{description}}</p>
+      <p></p>
+      <p><span style="font-size: 20px; font-family: bold "> Reviews: </span></p>
+      <div *ngFor="let review of reviews">
+        <p>{{review}}</p>
+      </div>
+      <app-reviews (onReviewAdded)="newReviewAdded($event)"></app-reviews>
+      <p></p>
+      <p><span style="font-size: 20px; font-family: bold "> Comments: </span> {{comments}} </p>
+      <div *ngFor="let comment of comments">
+        <p>{{comment}}</p>
+      </div>
+      <app-comments (onCommentAdded)="newCommentAdded($event)"></app-comments>
+      <p></p>
+      <app-form></app-form>
+
+    </div>
+  </div>
+
+</div>

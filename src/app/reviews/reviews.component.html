@@ -1,0 +1,9 @@
+<button (click)="onClick()">Add review</button>
+<div *ngIf="isOpened">
+  <form [formGroup]="reviewForm" (ngSubmit)="onSubmit($event)">
+    <p></p>
+    <label for="review">Review: </label>
+    <input id="review" formControlName="review">
+    <button type="submit">Submit</button>
+  </form>
+</div>
